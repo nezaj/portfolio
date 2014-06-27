@@ -2,6 +2,7 @@ from flask import Flask
 
 from loggers import get_app_stderr_handler
 import assets
+from . import errors
 
 def register_blueprints(app):
     " Registers blueprint routes on app "
@@ -12,6 +13,7 @@ def initialize_app(app):
     " Do any one-time initialization of the app prior to serving "
     app.static_folder = app.config['STATIC_DIR']
     assets.register_assets(app)
+    errors.register_error_handlers(app)
 
 def configure_loggers(app):
     "Set up app.logger to emit messages according to configuration"
