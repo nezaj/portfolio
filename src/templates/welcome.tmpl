@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include "head_tags.tmpl" %}
+    {% include "_head_tags.tmpl" %}
   </head>
   <body>
     <div class="container">
       <div class="headshot"></div>
-      <h1 class="name">Joe Averbukh</h1>
+      <h1>Joe Averbukh</h1>
         <div class="headline">Three things I tell myself everyday:</div>
         <div class="principles">
           <li>Be present</li>
@@ -14,12 +14,9 @@
           <li>Be consistent</li>
         </div>
       <div class="home-icons">
-          <a href="https://github.com/nezaj"><i class="fa fa-github"></i>
+          <a href="https://github.com/nezaj"><i class="fa fa-github"></i></a>
           <a href="http://www.linkedin.com/in/joeaverbukh"><i class="fa fa-linkedin-square"></i></a>
       </div>
     </div>
-    {% assets "js_all" %}
-      <script src="{{ ASSET_URL }}"></script>
-    {% endassets %}
   </body>
 </html>

@@ -1,10 +1,13 @@
 /* Application-wide CSS */
+$text-color: white;
 $link-color: white;
+$link-hover-color: black;
 
 /* Styled tags */
 body {
-    font-size: 14px;
+    font-size: 62.5%;
     background-color: rgb(0, 130, 200);
+    color: $text-color;
 }
 
 h1 {
@@ -19,31 +22,50 @@ a {
     text-decoration: none;
     color: $link-color;
     &:visited { color: $link-color;}
+    &:hover { color: $link-hover-color; }
 }
 
 /* Styled elements */
 .container {
     width: 90%;
-    margin: 25px auto;
+    height: auto;
+    margin: 5% auto;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: white;
 }
 
-.headshot {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    background-image: url("/static/img/headshot.jpg");
-    background-size: 120%;
-    overflow: hidden;
-    border-radius: 125px;
-    box-shadow: 0 0 0 10px white;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+@media (min-width: 481px) {
+    .headshot {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        background-image: url("/static/img/headshot.jpg");
+        background-size: 120%;
+        overflow: hidden;
+        border-radius: 125px;
+        box-shadow: 0 0 0 10px white;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .headshot {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        background-image: url("/static/img/headshot.jpg");
+        background-size: 120%;
+        overflow: hidden;
+        border-radius: 125px;
+        box-shadow: 0 0 0 10px white;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 
 .headline {
