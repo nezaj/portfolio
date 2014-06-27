@@ -1,12 +1,12 @@
 from flask import Flask
 
-from loggers import get_app_stderr_handler
-import assets
+from .loggers import get_app_stderr_handler
+from . import assets
 from . import errors
 
 def register_blueprints(app):
     " Registers blueprint routes on app "
-    from routes import main as main_blueprint
+    from .routes import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
 def initialize_app(app):

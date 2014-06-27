@@ -24,7 +24,7 @@ pep8:
 
 pylint:
 	@echo "Running pylint..."
-	$(VENV_ACTIVATE) && cd src && pylint .
+	$(VENV_ACTIVATE) && PYTHONPATH=. pylint src
 
 nosetests:
 	@echo "Running nosetests..."
