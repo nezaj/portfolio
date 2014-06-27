@@ -10,7 +10,7 @@ src/static/css/bundle.min.css
 src/static/js/all.min.js
 
 # Project environment variables
-src/.env
+.env
 
 # Logs and databases #
 *.log
