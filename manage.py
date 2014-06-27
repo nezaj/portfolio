@@ -3,8 +3,8 @@
 from flask_script import Manager
 from flask_script.commands import ShowUrls
 
-from app import create_app
-from config import app_config
+from src.app import create_app
+from src.config import app_config
 
 flask_app = create_app(app_config)
 manager = Manager(flask_app)
