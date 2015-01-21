@@ -2,6 +2,9 @@
 <html>
   <head>
     {% include "_head_tags.tmpl" %}
+    {% assets "css_all" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
   </head>
   <body>
     <div class="container">
@@ -14,10 +17,13 @@
           <li>Be consistent</li>
         </div>
       <div class="home-icons">
-          <a href="https://github.com/nezaj"><i class="fa fa-github"></i></a>
-          <a href="http://nezaj-blog.herokuapp.com"><i class="fa fa-pencil"></i></a>
-          <a href="http://www.linkedin.com/in/joeaverbukh"><i class="fa fa-linkedin-square"></i></a>
+          <a rel="tipsy" title="Github" href="https://github.com/nezaj"><i class="fa fa-github"></i></a>
+          <a rel="tipsy" title="Blog" href="http://nezaj-blog.herokuapp.com"><i class="fa fa-pencil"></i></a>
+          <a rel="tipsy" title="LinkedIn" href="http://www.linkedin.com/in/joeaverbukh"><i class="fa fa-linkedin-square"></i></a>
       </div>
     </div>
+    {% assets "js_all" %}
+      <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
   </body>
 </html>
