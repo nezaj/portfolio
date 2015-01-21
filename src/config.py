@@ -48,4 +48,4 @@ config_dict = {
     'default': DevelopmentConfig
 }
 
-app_config = config_dict[os.getenv('PORTFOLIO_CONFIG') or 'default']
+app_config = config_dict[os.getenv('CONFIG_ENV') or 'default']
