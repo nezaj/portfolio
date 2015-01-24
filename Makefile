@@ -28,4 +28,4 @@ pylint:
 
 test:
 	@echo "Running py.test..."
-	$(VENV_ACTIVATE) && CONFIG_ENV=test py.test tests
+	$(VENV_ACTIVATE) && CONFIG_ENV=test py.test tests --tb=short
