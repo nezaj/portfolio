@@ -3,7 +3,7 @@ import pytest
 
 from .util import captured_templates
 
-GYM_VIEW = 'main.gym'
+GYM_VIEW = 'gym.dashboard'
 
 @pytest.mark.usefixtures('client')
 class TestGymView(object):

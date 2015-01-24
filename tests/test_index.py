@@ -3,7 +3,7 @@ import pytest
 
 from .util import captured_templates
 
-INDEX_VIEW = 'main.welcome'
+INDEX_VIEW = 'public.welcome'
 
 @pytest.mark.usefixtures('client')
 class TestIndexView(object):
