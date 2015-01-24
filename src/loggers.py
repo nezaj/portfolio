@@ -4,7 +4,7 @@ Helper functions for configuring loggers.
 
 import logging
 
-from .config import app_config
+from .settings import app_config
 
 def get_stderr_handler(format_string, level):
     "Returns a standard error handler with provided format and level"
