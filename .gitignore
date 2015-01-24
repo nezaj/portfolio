@@ -4,10 +4,9 @@
 # Cached Flask Assets
 .webassets-cache/
 
-# Codegen
-src/static/css/compiled-scss.css
-src/static/css/bundle.min.css
-src/static/js/all.min.js
+# Asset Bundles
+*.compiled.css
+*.min.js
 
 # Project environment variables
 .env
