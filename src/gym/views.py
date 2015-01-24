@@ -4,4 +4,4 @@ blueprint = Blueprint('gym', __name__)
 
 @blueprint.route('/gym', methods=['GET'])
 def dashboard():
-    return render_template("gym.tmpl")
+    return render_template("gym/dashboard.tmpl")

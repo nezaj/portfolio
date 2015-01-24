@@ -4,4 +4,4 @@ blueprint = Blueprint('public', __name__)
 
 @blueprint.route('/', methods=['GET'])
 def welcome():
-    return render_template("welcome.tmpl")
+    return render_template("public/welcome.tmpl")
