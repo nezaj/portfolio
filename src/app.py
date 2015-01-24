@@ -1,8 +1,7 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 from .loggers import get_app_stderr_handler
 from . import assets
-from . import errors
 
 def register_blueprints(app):
     " Registers blueprint routes on app "
@@ -21,12 +20,13 @@ def configure_loggers(app):
     app.logger.setLevel(app.config["APP_LOG_LEVEL"])
     app.logger.addHandler(get_app_stderr_handler())
 
-def create_app(config_obj):
-    " Factory for creating app "
-    app = Flask(__name__)
-    app.config.from_object(config_obj)
-    configure_loggers(app)
-    initialize_app(app)
-    register_blueprints(app)
+def initialize_app(app):
+    " Do any one-time initialization of the app prior to serving "
+    app.static_folder = app.config['STATIC_DIR']
+    assets.register_assets(app)
+    register_error_handlers(app)
 
-    return app
+def register_error_handlers(app):
+    def handler(err):  # pylint: disable=unused-argument
+        return redirect(url_for("public.welcome"))
+    return app.errorhandler(404)(handler)
