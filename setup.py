@@ -3,19 +3,20 @@
 from setuptools import setup, find_packages
 
 dependencies = [
-    # packages for which we want the latest stable version
+    # Static analysis
     "pep8>=1.5.6",
     "pylint>=1.2.1",
-    "nose>=1.3.2",
-    # packages to freeze by default
-    "cssmin==0.2.0",
-    "pyscss==1.2.0",
-    "gunicorn==0.17.2",
+    # Flask and extensions
     "flask==0.10.1",
-    "sqlalchemy==0.9.3",
     "flask-assets==0.9",
     "flask-bcrypt==0.6.0",
     "flask-script==2.0.5",
+    # Asset minification
+    "cssmin==0.2.0",
+    "pyscss==1.2.0",
+    # Additional
+    "gunicorn==0.17.2",
+    "pytest==2.6.4",
 ]
 
 setup(
