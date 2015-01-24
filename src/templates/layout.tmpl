@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "header.tmpl" %}
+    {% assets "css_vendor" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
+    {% block styles %}
+      {# template-specific styles go here #}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+
+    {% assets "js_all" %}
+      <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    {% block scripts %}
+      {# template-specific scripts go here #}
+    {% endblock %}
+  </body>
+</html>

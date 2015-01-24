@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    {% include "_head_tags.tmpl" %}
-    {% assets "css_all" %}
+{% extends 'layout.tmpl' %}
+
+{% block styles %}
+    {% assets "css_welcome" %}
       <link rel="stylesheet" href="{{ ASSET_URL }}">
     {% endassets %}
-  </head>
-  <body>
-    <div class="container">
-      <div class="headshot"></div>
-      <h1>Joe Averbukh</h1>
-        <div class="headline">Three things I tell myself everyday:</div>
-        <div class="principles">
-          <li>Be present</li>
-          <li>Be honest</li>
-          <li>Be consistent</li>
-        </div>
-      <div class="home-icons">
-          <a rel="tipsy" title="Github" href="https://github.com/nezaj"><i class="fa fa-github"></i></a>
-          <a rel="tipsy" title="Blog" href="http://nezaj-blog.herokuapp.com"><i class="fa fa-pencil"></i></a>
-          <a rel="tipsy" title="LinkedIn" href="http://www.linkedin.com/in/joeaverbukh"><i class="fa fa-linkedin-square"></i></a>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="headshot"></div>
+    <h1>Joe Averbukh</h1>
+      <div class="headline">Three things I tell myself everyday:</div>
+      <div class="principles">
+        <li>Be present</li>
+        <li>Be honest</li>
+        <li>Be consistent</li>
       </div>
+    <div class="home-icons">
+        <a rel="tipsy" title="Github" href="https://github.com/nezaj"><i class="fa fa-github"></i></a>
+        <a rel="tipsy" title="Blog" href="http://nezaj-blog.herokuapp.com"><i class="fa fa-pencil"></i></a>
+        <a rel="tipsy" title="LinkedIn" href="http://www.linkedin.com/in/joeaverbukh"><i class="fa fa-linkedin-square"></i></a>
     </div>
-    {% assets "js_all" %}
-      <script src="{{ ASSET_URL }}"></script>
-    {% endassets %}
-  </body>
-</html>
+  </div>
+{% endblock %}
