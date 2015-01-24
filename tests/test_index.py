@@ -3,13 +3,14 @@ import pytest
 
 from .util import captured_templates
 
-INDEX_VIEW = 'public.welcome'
+VIEW_NAME = 'public.welcome'
+TEMPLATE_NAME = 'public/welcome.tmpl'
 
 @pytest.mark.usefixtures('client')
 class TestIndexView(object):
 
     def get_view(self):
-        return self.client.get(url_for(INDEX_VIEW))
+        return self.client.get(url_for(VIEW_NAME))
 
     def test_ok(self):
         res = self.get_view()
@@ -28,4 +29,4 @@ class TestIndexView(object):
 
             assert len(templates) == 1
             template, _ = templates[0]
-            assert template.name == 'welcome.tmpl'
+            assert template.name == TEMPLATE_NAME
