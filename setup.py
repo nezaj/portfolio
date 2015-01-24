@@ -11,6 +11,7 @@ dependencies = [
     "flask-assets==0.9",
     "flask-bcrypt==0.6.0",
     "flask-script==2.0.5",
+    "flask-webtest==0.0.7",
     # Asset minification
     "cssmin==0.2.0",
     "pyscss==1.2.0",
