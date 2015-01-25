@@ -15,9 +15,9 @@ def register_assets(app):
     assets.url = app.static_url_path
 
     css_vendor = Bundle(*VENDOR_ASSETS, filters='cssmin',
-                        output='css/vendor.compiled.css')
+                        output='css/vendor.min.css')
     css_welcome = Bundle('css/welcome.scss', filters='pyscss',
-                         output='css/welcome.compiled.css')
+                         output='css/welcome.min.css')
 
     js_all = Bundle(*JS_ASSETS, filters='rjsmin', output='js/all.min.js')
 

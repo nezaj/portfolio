@@ -5,7 +5,7 @@
 .webassets-cache/
 
 # Asset Bundles
-*.compiled.css
+*.min.css
 *.min.js
 
 # Project environment variables
@@ -15,8 +15,10 @@
 *.log
 *dev.db
 
-# Testing
-nosetests.xml
+# Coverage and tests
+.coverage
+pytests.xml
+coverage.xml
 
 # Packages
 *.egg
