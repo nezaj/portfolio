@@ -12,7 +12,7 @@ clean:
 
 check:
 	$(MAKE) virtualenv
-	$(MAKE) pylint pep8 test
+	$(MAKE) pylint pep8 test-cov
 
 virtualenv:
 	test -d $(VENV_PATH) || virtualenv $(VENV_PATH)
@@ -29,3 +29,13 @@ pylint:
 test:
 	@echo "Running py.test..."
 	$(VENV_ACTIVATE) && CONFIG_ENV=test py.test tests --tb=short
+
+test-cov:
+	@echo "Running py.test with coverage..."
+	$(VENV_ACTIVATE) && \
+		CONFIG_ENV=test py.test \
+		--cov-config .coveragerc \
+		--cov-report term-missing \
+		--cov-report xml \
+		--cov src tests/ --tb=short \
+		--junitxml=pytests.xml

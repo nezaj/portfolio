@@ -18,6 +18,7 @@ dependencies = [
     # Additional
     "gunicorn==0.17.2",
     "pytest==2.6.4",
+    "pytest-cov==1.8.1",
 ]
 
 setup(
