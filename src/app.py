@@ -2,7 +2,7 @@ from flask import Flask, redirect, url_for
 
 from .loggers import get_app_stderr_handler
 from . import assets
-from . import gym, public
+from . import gym, iphone, public
 
 def create_app(config_obj):
     app = Flask(__name__)
@@ -26,6 +26,7 @@ def initialize_app(app):
 
 def register_blueprints(app):
     app.register_blueprint(gym.views.blueprint)
+    app.register_blueprint(iphone.views.blueprint)
     app.register_blueprint(public.views.blueprint)
 
 def register_error_handlers(app):
