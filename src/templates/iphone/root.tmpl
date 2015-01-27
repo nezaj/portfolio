@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jonathan Stark</title>
+  {# Tell the browser the device width}
+  <meta content="user-scalable=no, width=device-width" name="viewport">
+
+  {# Display web app in full screen mode when launched from web clip icon #}
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  {# Customize status bar appearance #}
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <link rel="apple-touch-startup-image"
+        href="{{ url_for('static', filename='img/startup_graphic.png') }}"/>
+
+  {# Include 57x57 custom web icon for home screen #}
+  <link rel="apple-touch-icon"
+        href="{{ url_for('static', filename='img/web_icon.png') }}"/>
+
+  <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='css/iphone/iphone.css') }}"/>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Jonathan Stark</h1>
+    {% block navs %}{% endblock %}
+  </div>
+
+  <div id="container">{% block content %}{% endblock %}</div>
+
+  <script type="text/javascript"
+          src="{{ url_for('static', filename='js/vendor/jquery.js') }}">
+  </script>
+  <script type="text/javascript"
+          src="{{ url_for('static', filename='js/iphone/root.js') }}">
+  </script>
+</body>
+</html>

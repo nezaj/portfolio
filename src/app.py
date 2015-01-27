@@ -26,7 +26,7 @@ def initialize_app(app):
 
 def register_blueprints(app):
     app.register_blueprint(gym.views.blueprint)
-    app.register_blueprint(iphone.views.blueprint)
+    app.register_blueprint(iphone.views.blueprint, url_prefix='/iphone')
     app.register_blueprint(public.views.blueprint)
 
 def register_error_handlers(app):

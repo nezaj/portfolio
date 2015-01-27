@@ -3,8 +3,8 @@ import pytest
 
 from .util import captured_templates
 
-VIEW_NAME = 'iphone.dashboard'
-TEMPLATE_NAME = 'iphone/dashboard.tmpl'
+VIEW_NAME = 'iphone.root'
+TEMPLATE_NAME = 'iphone/root.tmpl'
 
 @pytest.mark.usefixtures('client')
 class TestIphoneView(object):
