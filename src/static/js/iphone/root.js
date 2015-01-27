@@ -37,7 +37,7 @@ function hijackLinks(referrer_url) {
     var url = e.target.href;
 
     // Only hijack internal links!
-    if (url.match(/localhost/)) {
+    if (url.match(/(localhost|joeaverbukh)/)) {
       e.preventDefault();
       loadPage(e.target.href);
       console.log("Loadded " + e.target.href + "!")
