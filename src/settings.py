@@ -1,6 +1,8 @@
 import os
 import logging
 
+from sqlalchemy.engine.url import URL
+
 class Config(object):
     # controls whether web interfance users are in Flask debug mode
     # (e.g. Werkzeug stack trace console, unminified assets)
@@ -18,6 +20,8 @@ class Config(object):
     # Useful directories
     SRC_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_DIR = os.path.join(SRC_DIR, 'static')
+
+    SQLALCHEMY_DATABASE_URI = URL(drivername='sqlite', database='dev.db')
 
 class DevelopmentConfig(Config):
     ENV = 'dev'

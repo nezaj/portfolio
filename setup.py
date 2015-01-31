@@ -10,6 +10,7 @@ dependencies = [
     "flask==0.10.1",
     "flask-assets==0.9",
     "flask-bcrypt==0.6.0",
+    "flask-migrate==1.3.0",
     "flask-script==2.0.5",
     "flask-webtest==0.0.7",
     # Asset minification
@@ -19,6 +20,7 @@ dependencies = [
     "gunicorn==0.17.2",
     "pytest==2.6.4",
     "pytest-cov==1.8.1",
+    "sqlalchemy==0.9.8",
 ]
 
 setup(
