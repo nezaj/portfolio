@@ -3,8 +3,8 @@ import pytest
 
 from .util import captured_templates
 
-VIEW_NAME = 'gym.dashboard'
-TEMPLATE_NAME = 'gym/dashboard.tmpl'
+VIEW_NAME = 'gym.root'
+TEMPLATE_NAME = 'gym/root.tmpl'
 
 @pytest.mark.usefixtures('client')
 class TestGymView(object):
@@ -16,7 +16,7 @@ class TestGymView(object):
         res = self.get_view()
         assert res.status_code == 200
 
-    def test_renders_package_list_template(self):
+    def test_renders_template(self):
         with captured_templates(self.app) as templates:
             self.get_view()
 

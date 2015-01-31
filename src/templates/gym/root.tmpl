@@ -1,0 +1,21 @@
+{% extends 'common/layout.tmpl' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  {# Tell the browser the device width #}
+  <meta content="user-scalable=no, width=device-width" name="viewport">
+
+  {# Display web app in full screen mode when launched from web clip icon #}
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  {# Customize status bar appearance #}
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <title>Gym Logger</title>
+</head>
+<body>
+  <div id="container">{% block content %}{% endblock %}</div>
+</body>
+</html>

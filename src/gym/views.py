@@ -2,6 +2,6 @@ from flask import Blueprint, render_template
 
 blueprint = Blueprint('gym', __name__)
 
-@blueprint.route('/gym', methods=['GET'])
-def dashboard():
-    return render_template("gym/dashboard.tmpl")
+@blueprint.route('/', methods=['GET'])
+def root():
+    return render_template("gym/root.tmpl")

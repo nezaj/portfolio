@@ -16,7 +16,7 @@ class TestIphoneView(object):
         res = self.get_view()
         assert res.status_code == 200
 
-    def test_renders_package_list_template(self):
+    def test_renders_template(self):
         with captured_templates(self.app) as templates:
             self.get_view()
 
