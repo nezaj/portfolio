@@ -84,3 +84,5 @@ def named_declarative_base(**kwargs):
     metadata = MetaData(naming_convention=convention)
 
     return declarative_base(metadata=metadata, **kwargs)
+
+Base = named_declarative_base(cls=BaseModel)

@@ -1,14 +1,18 @@
 from flask import Flask, redirect, url_for
 
-from .loggers import get_app_stderr_handler
+
 from . import assets
 from . import gym, iphone, public
+from .data.db import db
+from .extensions import migrate
+from .loggers import get_app_stderr_handler
 
 def create_app(config_obj):
     app = Flask(__name__)
     app.config.from_object(config_obj)
     configure_loggers(app)
     initialize_app(app)
+    register_extensions(app)
     register_blueprints(app)
     return app
 
@@ -21,8 +25,11 @@ def configure_loggers(app):
 def initialize_app(app):
     " Do any one-time initialization of the app prior to serving "
     app.static_folder = app.config['STATIC_DIR']
-    assets.register_assets(app)
     register_error_handlers(app)
+
+def register_extensions(app):
+    assets.register_assets(app)
+    migrate.init_app(app, db)
 
 def register_blueprints(app):
     app.register_blueprint(gym.views.blueprint, url_prefix='/gym')
