@@ -2,7 +2,6 @@ from sqlalchemy.schema import Column
 from sqlalchemy.orm import relation
 from sqlalchemy.types import Integer, String
 
-from .prescription import Prescription
 from ...data.base import Base
 from ...data.db import db
 from ...data.mixins import CRUDMixin, FilterMixin
