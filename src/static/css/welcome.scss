@@ -10,10 +10,20 @@ body {
     color: $text-color;
 }
 
-h1 {
-    font-size: 4rem;
+.greeting {
+    font-size: 3.5rem;
     font-family: Helvetica,Arial,sans-serif;
     font-weight: 600;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.sub-greeting {
+    font-size: 1rem;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 300;
     line-height: 1.1;
     color: inherit;
 }
