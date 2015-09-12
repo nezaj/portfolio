@@ -14,7 +14,7 @@ from flask_script.commands import ShowUrls
 from src.app import create_app
 from src.data.db import db, DatabaseConnection
 from src.data.base import Base
-from src.gym import models
+from src.data import models
 from src.settings import app_config
 from src.util import invoke_process, parse_sqlalchemy_url, yes_no
 
@@ -28,6 +28,7 @@ manager.add_command("routes", ShowUrls())
 def make_context_shell():
     """Starts a python shell with with app, db and models loaded"""
     # Loads all the models which inherit from Base
+
     models_map = {name: cls for name, cls in models.__dict__.items() if isinstance(cls, type(Base))}
     return dict(app=app, db=db, **models_map)
 

@@ -18,9 +18,11 @@ dependencies = [
     "pyscss==1.2.0",
     # Additional
     "gunicorn==0.17.2",
+    "misaka==1.0.2",
     "pytest==2.6.4",
     "pytest-cov==1.8.1",
     "sqlalchemy==0.9.8",
+    "psycopg2==2.5.2",
 ]
 
 setup(

@@ -3,6 +3,8 @@ from sqlalchemy.orm import Query
 from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
+from .pagination import Pagination
+
 class BaseModel(object):
     """
     The base class for all of our database models.
@@ -64,6 +66,33 @@ class BaseQuery(Query):
         if rv is None:
             abort(404)
         return rv
+
+    def paginate(self, page=1, per_page=10, die=True):
+        """
+        Returns a Pagination object containing `per_page` items from page
+        `page`. By default it will abort with 404 if no items were
+        found and the page was larger than 1. This behavior can be
+        disabled by setting `die` to `False`. If sort_attr and
+        sort_dir are specified, then order the items appropriately.
+        If search_cols and search_query are specified, then only
+        return items where the given cols match the query string.
+        """
+        if die and page < 1:
+            abort(404)
+
+        items = self.limit(per_page).offset((page - 1) * per_page).all()
+
+        if not items and page != 1 and die:
+            abort(404)
+
+        # No need to count if we're on the first page and there are fewer
+        # items than we expected.
+        if page == 1 and len(items) < per_page:
+            total = len(items)
+        else:
+            total = self.count()
+
+        return Pagination(self, page, per_page, total, items)
 
 def named_declarative_base(**kwargs):
     """

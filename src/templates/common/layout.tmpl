@@ -3,9 +3,6 @@
   <head>
     <title>{% block title %}Joe Averbukh{% endblock %}</title>
     {% include "common/header.tmpl" %} {# Meta tags and CDN content #}
-    {% assets "css_vendor" %}
-      <link rel="stylesheet" href="{{ ASSET_URL }}">
-    {% endassets %}
     {% block styles %}
       {# template-specific styles go here #}
     {% endblock %}

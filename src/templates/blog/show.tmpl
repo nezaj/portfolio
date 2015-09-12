@@ -1,0 +1,45 @@
+{% extends "blog/layout.tmpl" %}
+
+{% macro render_pagination_link(post, cls) %}
+  <a class="{{ cls }}" href="{{ url_for('blog.show', slug=post.slug) }}">
+    {{ post.title|safe|title }}
+  </a>
+{% endmacro %}
+
+{% macro render_post_pagination(next_post, prev_post) %}
+  {% if next_post or prev_post %}
+    <nav class="pagination pagination-sm post-pagination">
+    {% if next_post %}
+      {{ render_pagination_link(next_post, "newer-post pull-left") }}
+    {% endif %}
+    {% if prev_post %}
+      {{ render_pagination_link(prev_post, "older-post pull-right") }}
+    {% endif %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+{% block title %}
+  {{ post.title }}
+{% endblock %}
+
+{% block content %}
+  <div class="post-header">
+    <h1><div class="post-title">{{ post.title }}</div></h1>
+    <div class="post-meta">
+      <div>
+        {% if post.published %}
+          {{ post.published_dt.strftime('%B %d %Y') }}
+        {% endif %}
+      </div>
+    {% if tags %}
+      <div>Tagged: {{ tags }}</div>
+    {% endif %}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{ post.content|markdownize }}
+  </div>
+  {{ render_post_pagination(next_post, prev_post) }}
+{% endblock %}

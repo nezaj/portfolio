@@ -1,0 +1,192 @@
+/* Colors */
+$blue-color: #4582ec;
+$black-color: lighten(black, 20%);
+$lighter-black-color: lighten($black-color, 30%);
+$white-color: darken(white, 25%);
+$lighter-white-color: lighten($white-color, 10%);
+
+/* Functional Colors */
+$link-color: $blue-color;
+$post-stub-hover-background: lighten($link-color, 38%);
+$hover-link-color: darken($link-color, 15%);
+
+/* Functional Layouts */
+$footer-height: 265px;
+
+/* Over-write theme rules */
+body { color: $black-color; }
+
+p { line-height: 1.8; }
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: $hover-link-color;
+        text-decoration: none;
+    }
+}
+
+/* Pagination */
+.posts-pagination {
+    width: 92%;
+    position: relative;
+    left: 4%;
+    font-weight: 600;
+}
+
+.post-pagination {
+    width: 92%;
+    position: relative;
+    left: 4%;
+    font-size: 0.8em;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+/* Generic CSS */
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    margin-bottom: -$footer-height;
+
+    &:after {
+        content: "";
+        display: block;
+        height: $footer-height;
+    }
+}
+
+.text-center { text-align: center; }
+
+/* Header-related CSS */
+.header { margin: 100px 0px 35px; }
+
+.site-title-wrapper {
+    display: table;
+    margin: 0 auto;
+    a {
+        background: $link-color;
+        &:hover {
+            background: $black-color;
+            color: white;
+            border-bottom: 0;
+            }
+    }
+}
+
+.site-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.site-buttons {
+    float: left;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.button-square {
+    float: left;
+    background: $link-color;
+    color: white;
+    margin-left: 10px;
+    padding: 5px 7px;
+}
+
+/* Footer-related CSS */
+.footer {
+    margin-top: 20px;
+    background: $black-color;
+    height: $footer-height;
+    overflow: auto;
+}
+
+.footer-copyright {
+    color: $white-color;
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.8em;
+    padding-top: 80px;
+    margin: 0 auto 35px;
+}
+
+.footer-copyright a {
+    color: $lighter-white-color;
+    font-weight: 700;
+    &:hover {
+        color: $lighter-white-color;
+        border-bottom: 1px dashed $lighter-white-color;
+    }
+}
+
+/* Shared Post-related CSS Rules */
+.post-header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 3px solid $black-color;
+}
+
+.post-title {
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif, futura, helvetica, arial, sans-serif;
+    font-size: 1.0em;
+}
+
+/* Post Index CSS Rules */
+.post-index { padding-top: 0px; }
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-stub {
+    border-bottom: 1px dotted $black-color;
+    a {
+        -webkit-transition:all .2s ease-in-out;
+        -moz-transition:all .2s ease-in-out;
+        transition:all .2s ease-in-out;
+        display: block;
+        padding: 1.2em 0em;
+        font-size: 1.2em;
+        padding-left: 2px;
+        color: $black-color;
+        &:hover {
+            color: $link-color;
+            background: $post-stub-hover-background;
+            border-bottom: 0px
+        }
+    }
+}
+
+.post-stub-publish {
+    display: inline-block;
+    font-size: 0.8em;
+    color: $lighter-black-color;
+}
+
+.paginate-link {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Post Show CSS Rules */
+.post-content { padding-top: 50px; }
+
+.post-meta {
+    text-transform: uppercase;
+    color: $lighter-black-color;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: "Consolas", "Courier", "Gotham Narrow", "Times New Roman", Times, serif;
+    margin-top: 30px;
+}
+
+/* Default blockquote formatting doesn't fit */
+blockquote {
+    font-size: 0.9em;
+    border-left: 3px solid lightgrey;
+}
