@@ -1,6 +1,5 @@
 from flask import Flask, redirect, url_for
 
-
 from . import assets
 from . import blog, gym, iphone, public
 from .data.db import db
