@@ -9,5 +9,11 @@ v ja-portfolio
 open localhost:5000
 ```
 
+### Deploy
+```
+git push  # push changes to github repo
+git push heroku master  # push changes to heroku/website
+```
+
 [portfolio]: http://www.joeaverbukh.com
 [flask]: http://flask.pocoo.org/
