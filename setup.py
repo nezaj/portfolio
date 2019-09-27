@@ -17,7 +17,7 @@ dependencies = [
     "cssmin==0.2.0",
     "pyscss==1.2.0",
     # Additional
-    "gunicorn==0.17.2",
+    "gunicorn==19.5.0",
     "misaka==1.0.2",
     "pytest==2.6.4",
     "pytest-cov==1.8.1",
