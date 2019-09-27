@@ -4,7 +4,7 @@ Source of my portfolio website. Made with [Flask][flask].
 ### Quick-start
 ```
 make check
-v ja-portfolio
+. ~/.virtualenvs/ja-portfolio/bin/activate
 ./manage.py runserver
 open localhost:5000
 ```
