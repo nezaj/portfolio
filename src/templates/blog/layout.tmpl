@@ -3,7 +3,9 @@
     <title>{% block title %}{% endblock %} ~ Joe Averbukh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel=stylesheet href="/static/css/blog.min.css">
+    {% assets "css_blog" %}
+      <link rel=stylesheet href="{{ ASSET_URL }}">
+    {% endassets %}
   </head>
   <body>
     <div id="wrapper">
@@ -16,5 +18,7 @@
     </div>
     {% include "blog/footer.tmpl" %}
   </body>
-  <script src="/static/js/all.min.js"></script>
+  {% assets "js_all" %}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets %}
 </html>

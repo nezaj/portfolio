@@ -1,7 +1,9 @@
 {% extends 'common/layout.tmpl' %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/static/css/welcome.min.css">
+    {% assets "css_welcome" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
 {% endblock %}
 
 {% block content %}
