@@ -7,7 +7,7 @@ dependencies = [
     "pep8>=1.5.6",
     "pylint>=1.2.1",
     # Flask and extensions
-    "flask==0.10.1",
+    "flask==1.0",
     "flask-assets==0.9",
     "flask-bcrypt==0.6.0",
     "flask-migrate==1.3.0",
