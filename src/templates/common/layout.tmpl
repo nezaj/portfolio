@@ -11,9 +11,7 @@
     {% block content %}
     {% endblock %}
 
-    {% assets "js_all" %}
-      <script src="{{ ASSET_URL }}"></script>
-    {% endassets %}
+    <script src="/static/js/all.min.js"></script>
     {% block scripts %}
       {# template-specific scripts go here #}
     {% endblock %}

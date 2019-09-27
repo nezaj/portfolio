@@ -1,10 +1,12 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\000036}}
 body {
   font-size: 62.5%;
-  background-color: #0082c8;
+  background: #0072ff;
+  background: -webkit-radial-gradient(#3498db 5%, #2c3e50);
+  background: -o-radial-gradient(#3498db 5%, #2c3e50);
+  background: -moz-radial-gradient(#3498db 5%, #2c3e50);
+  background: radial-gradient(circle, #3498db 5%, #2c3e50);
   color: white; }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000313}}
   .greeting {
     font-size: 3.5rem;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif, futura, helvetica, arial,
@@ -15,7 +17,6 @@ body {
     margin-top: 30px;
     margin-bottom: 10px; }
 
-    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000323}}
     .sub-greeting {
       font-size: 1rem;
       font-family: Helvetica, Arial, sans-serif;
@@ -23,18 +24,14 @@ body {
       line-height: 1.1;
       color: inherit; }
 
-      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000331}}
       a {
         text-decoration: none;
         color: white; }
-        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000334}}
         a:visited {
           color: white; }
-          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000335}}
           a:hover {
             color: black; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000338}}
 .container {
   width: 90%;
   height: auto;
@@ -44,9 +41,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000350}}
   @media (min-width: 481px) {
-    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000350}}
     .headshot {
       width: 250px;
       height: 250px;
@@ -61,9 +56,7 @@ body {
       box-sizing: border-box;   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000366}}
 @media (min-width: 320px) and (max-width: 480px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000366}}
   .headshot {
     width: 150px;
     height: 150px;
@@ -78,16 +71,13 @@ body {
     box-sizing: border-box;   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000381}}
 .headline {
   font-size: 1.25rem;
   letter-spacing: 2px; }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000386}}
   .principles {
     margin-top: 30px;
     margin-bottom: 30px; }
-    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000389}}
     .principles li {
       list-style-type: none;
       margin-top: 10px;
@@ -96,11 +86,9 @@ body {
       font-size: 1.75em;
       letter-spacing: 2px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\0000399}}
 .home-icons {
   margin-top: 20px;
   font-size: 3em; }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/joeaverbukh\/Projects\/portfolio\/src\/static\/css\/welcome\.scss}line{font-family:\00003104}}
   .tipsy {
     font-size: 13px; }
