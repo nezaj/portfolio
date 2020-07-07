@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for
 
 from . import assets
-from . import blog, gym, iphone, public
+from . import blog, public
 from .data.db import db
 from .extensions import migrate
 from .loggers import get_app_stderr_handler
@@ -34,8 +34,6 @@ def register_extensions(app):
 
 def register_blueprints(app):
     app.register_blueprint(blog.views.blueprint, url_prefix='/blog')
-    app.register_blueprint(gym.views.blueprint, url_prefix='/gym')
-    app.register_blueprint(iphone.views.blueprint, url_prefix='/iphone')
     app.register_blueprint(public.views.blueprint)
 
 def register_jinja_filters(app):
