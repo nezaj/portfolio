@@ -1,5 +1,7 @@
-### [Portfolio][portfolio]
-Source of my portfolio website. Made with [Flask][flask].
+# DEPRECATED: See [new repo](https://github.com/nezaj/me)
+This used to be the source of my portfolio website. But I ported this from python/flask/jinja to React.
+
+Keeping code and info here for funsies
 
 ### Quick-start
 ```
